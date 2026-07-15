@@ -377,6 +377,7 @@ function pressKey(n){
   updateDots();
   if (entered.length===4){
     if (entered===CONFIG.passcode){
+      startMusic();   // start the song right away (uses her tap as the trigger)
       setTimeout(()=>{ go('hero'); fireworksBurst(14); showFabs(); },350);
     } else {
       $('lockCard').classList.add('shake');
@@ -484,6 +485,10 @@ $('reasonBtn').onclick=()=>{
   if (!reasonPool.length) reasonPool=[...CONFIG.reasons].sort(()=>Math.random()-.5);
   toast('♥ ' + reasonPool.pop());
 };
+function startMusic(){
+  const a=$('music');
+  if (a.paused){ a.play().then(()=>{ $('musicBtn').textContent='♪♪'; }).catch(()=>{}); }
+}
 $('musicBtn').onclick=()=>{
   const a=$('music');
   if (a.paused){ a.play().then(()=>{ $('musicBtn').textContent='♪♪'; })
