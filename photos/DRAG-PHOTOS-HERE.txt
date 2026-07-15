@@ -1,0 +1,8 @@
+Drag your photos into THIS folder, named exactly:
+
+  1.jpg ... 6.jpg   -> the six polaroids (order = captions in CONFIG)
+  starmap.jpg       -> your star map (print one at the-night-sky.com)
+
+Also place next to birthday-website.html (NOT in this folder):
+  music.mp3         -> your song
+  voice-note.mp3    -> your recorded voice message
